@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({'extended':'true'}));           
 app.use(bodyParser.json());        
 app.use(cors());                            
-app.use(express.static('/public/images'));
+app.use(express.static('public'));
 var categoryNameModel = require('./src/models/categoryName.model');
 var categoryNameRoutes = require('./routes/categoryName_routes');
 
