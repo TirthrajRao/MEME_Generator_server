@@ -21,7 +21,7 @@ app.use('/api', categoryNameRoutes)
 // mongoose.connect("mongodb+srv://rao:raoinfotech%4009@meme-generator-bljob.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true })
 // .then(() => console.log("Connected"))
 // .catch(err => console.log("MongoDB Error : ",err));
-mongoose.connect("54.185.16.135:27017", { useNewUrlParser: true })
+mongoose.connect("54.185.16.135:27017/meme", { useNewUrlParser: true })
 .then(() => console.log("Connected"))
 .catch(err => console.log("MongoDB Error : ",err));
 
