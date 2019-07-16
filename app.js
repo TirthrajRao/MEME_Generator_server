@@ -21,8 +21,9 @@ app.use('/api', categoryNameRoutes)
 
 
 
-mongoose.connect("mongodb://localhost:27017/meme_api");
-console.log("connected");
+mongoose.connect("mongodb://localhost:27017/meme_api", { useNewUrlParser: true })
+.then(() => console.log("Connected"))
+.catch(err => console.log(err));
 
 module.exports = app;
 
