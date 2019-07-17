@@ -4,16 +4,14 @@ var app = express();
 var CategoryNamecontroller = require('./src/controllers/categoryName.controller');
 var cors = require('cors');
 
-
 var bodyParser = require('body-parser');         
 
 app.use(bodyParser.urlencoded({'extended':'true'}));           
 app.use(bodyParser.json());        
 app.use(cors());                            
-app.use(express.static('public'));
+app.use(express.static('public/images'));
 var categoryNameModel = require('./src/models/categoryName.model');
 var categoryNameRoutes = require('./routes/categoryName_routes');
-
 
 app.use('/api', categoryNameRoutes)
 app.use('/api', categoryNameRoutes)
