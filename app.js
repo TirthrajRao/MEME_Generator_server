@@ -18,7 +18,7 @@ var categoryNameRoutes = require('./routes/categoryName_routes');
 app.use('/api', categoryNameRoutes)
 app.use('/api', categoryNameRoutes)
 
-mongoose.connect("mongo -u rao -p raoinfotech@09 54.185.16.135:27017", { useNewUrlParser: true })
+mongoose.connect("mongodb://rao:raoinfotech@54.185.16.135:27017/meme-generator", { useNewUrlParser: true })
 .then(() => console.log("Connected"))
 .catch(err => console.log("MongoDB Error : ",err));
 
