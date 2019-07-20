@@ -1,7 +1,6 @@
 var express  = require('express');
 var mongoose = require('mongoose');
 var app = express();
-var CategoryNamecontroller = require('./src/controllers/categoryName.controller');
 var cors = require('cors');
 
 var bodyParser = require('body-parser');         
@@ -9,8 +8,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({'extended':'true'}));           
 app.use(bodyParser.json());        
 app.use(cors());                            
-app.use(express.static('public/images'));
-var categoryNameModel = require('./src/models/categoryName.model');
+app.use(express.static('public'));
 var categoryNameRoutes = require('./routes/categoryName_routes');
 
 app.use('/api', categoryNameRoutes)
